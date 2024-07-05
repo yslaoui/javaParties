@@ -1,4 +1,4 @@
-package finnishParties;
+package javaParties;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -34,11 +34,11 @@ public class Csv {
                 row = buffer.readLine();
             }
         } catch (FileNotFoundException e) {
-            throw new RuntimeException();
+            throw new RuntimeException("File not found");
         } catch (IOException e) {
-            throw new RuntimeException();
+            throw new RuntimeException("File exists but could not be read");
         } catch (NumberFormatException e) {
-            throw new RuntimeException();
+            throw new RuntimeException("Data cannot be converted to double");
         }
         return data;
     }
